@@ -52,11 +52,9 @@ df_test = scalar.transform(df_test)
 
 model = Sequential()
 model.add(Dense(units=8, activation="relu", input_shape=(14, )))
-model.add(Dense(units=4, activation="relu"))
-model.add(Dropout(0.5))
-model.add(Dense(units=4, activation="relu"))
-model.add(Dropout(0.5))
-model.add(Dense(units=2, activation="relu"))
+#model.add(Dense(units=4, activation="relu"))
+#model.add(Dense(units=4, activation="tanh"))
+#model.add(Dense(units=2, activation="tanh"))
 model.add(Dense(units=1, activation="softmax"))
 
 model.compile(optimizer='rmsprop',
